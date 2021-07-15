@@ -1,0 +1,42 @@
+<% layout ('layouts/boilerplate') %>
+<div class="row mt-1">
+    <h1 class="text-center">Selected Product</h1>
+    <div class="col-4 offset-4">
+<form action="/inventory" method="POST">
+        <div class="mb-1">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name"  name="inventory[name]" placeholder="name">
+        </div>
+        <div class="mb-1">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email"  name="inventory[email]" placeholder="email">
+        </div>
+        <div class="mb-1">
+            <label for="sku" class="form-label">SKU:</label>
+            <input type="text" class="form-control" id="sku"  name="inventory[sku]" placeholder="sku">
+        </div>
+        <div class="mb-1">
+            <label for="description" class="form-label">Description:</label>
+            <input type="text" class="form-control" id="description"  name="inventory[description]" placeholder="description">
+        </div>
+        <div class="mb-1">
+            <label for="price" class="form-label">Price:</label>
+            <input type="text" class="form-control" id="price"  name="inventory[price]" placeholder="price">
+        </div>
+        <div class="mb-1">
+            <label for="stocklevel" class="form-label">Stock Level:</label>
+            <input type="text" class="form-control" id="stocklevel"  name="inventory[stock]" placeholder="stocklevel">
+        </div>
+        <div class="row mb-1">
+            <div class="d-grid col-6">
+            <button class="btn btn-primary btn-sm">Create</button>
+        </div>
+        <div class="d-grid col-6">
+            <a class="btn btn-success btn-sm" href="/inventory">Cancel</a>
+        </div>
+        </div>
+    </form>
+    </div>
+</div>
+    
+    

@@ -1,0 +1,60 @@
+<% layout ('layouts/boilerplate') %>
+
+  <div class="row">
+       <div class="card">
+          <div class="card-body">
+              <div class="card-title">
+                  <h2 class="text-center">Product Inventory</h2>
+              </div>
+          </div>
+      </div>
+    <div class="col">
+            <div class="row card list-group list-group-flush">
+                <span class="list-group-item"><%= product.name %></span>
+            </div>
+    </div>
+    <div class="col">
+             <div class="row card list-group list-group-flush">
+               <span class="list-group-item"><%= product.email %></span>
+            </div>
+    </div>
+    <div class="col">
+             <div class="row card list-group list-group-flush">
+                <span class="list-group-item"><%= product.sku %></span>
+            </div>
+    </div>
+     <div class="col">
+             <div class="row card list-group list-group-flush">
+                <span class="list-group-item"><%= product.description %></span>
+            </div>
+    </div>
+    <div class="col">
+             <div class="row card list-group list-group-flush">
+                <span class="list-group-item"><%= product.price %></span>
+            </div>
+    </div>
+     <div class="col">
+             <div class="row card list-group list-group-flush">
+                 <span class="list-group-item"><%= product.stock %></span>
+            </div>
+    </div>
+    <div class="col">
+             <div class="row card list-group list-group-flush">
+                <span class="list-group-item"><a class="btn btn-warning btn-sm" href="/inventory/<%= product._id %>/edit">Edit</a></span>
+            </div>
+    </div>
+     <div class="col">
+             <div class="row card list-group list-group-flush">
+                <span class="list-group-item">
+                    <form action="/inventory/<%= product._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger btn-sm">DELETE</button>
+                    </form>
+                </span>
+            </div>
+    </div>
+    <div class="col">
+             <div class="row card list-group list-group-flush">
+                <span class="list-group-item"><a class="btn btn-danger btn-sm" href="/inventory">Back</a></span>     
+            </div>
+    </div>
+  </div>
